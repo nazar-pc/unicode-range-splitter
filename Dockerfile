@@ -23,10 +23,8 @@ RUN \
 	apt-get purge --auto-remove -y git ca-certificates g++ make && \
 	apt-get clean && \
 	rm -rf /var/lib/apt/lists/*
-
-RUN useradd -s /bin/bash -g root -u 1000 user
-
-USER user
+# Typical UID in single-user systems
+USER 1000
 
 ENV \
 	CHARS_IN_RANGE=100 \

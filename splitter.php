@@ -42,7 +42,7 @@ copy('/font.woff2', '/tmp/font.woff2');
 system('woff2_decompress /tmp/font.woff2') !== false || exit;
 
 $new_font_face = '';
-$count         = count($unicode_characters) / 100;
+$count         = count($unicode_characters) / $_ENV['CHARS_IN_RANGE'];
 for ($i = 0; $i < $count; ++$i) {
 	$range = array_slice($unicode_characters, $i * $_ENV['CHARS_IN_RANGE'], $_ENV['CHARS_IN_RANGE']);
 
