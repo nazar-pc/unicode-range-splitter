@@ -7,6 +7,7 @@ Using this tool you can split all of the icons into unicode ranges and put each 
 WOFF2 format is supported across all major evergreen browsers, so this tool only supports WOFF2 and drops any other formats from CSS file (if you absolutely need, feel free to customize source code).
 
 # Usage
+Before using this, make sure you have [Docker installed](https://www.docker.com/community-edition#/download) on your machine.
 ```
 Splitter takes *.woff2 and *.css files and produces series of *.woff2 files and modified *.css file
 Produced *.woff2 files are separated in such a way that each file will only contain at most CHARS_IN_RANGE glyphs (icons)
